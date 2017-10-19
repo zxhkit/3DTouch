@@ -1,8 +1,8 @@
 # -3DTouch
 仿京东3DTouch,按APP的icon弹出会计方式,按搜索结果弹出详情页.     
-  
-  
-应用icon快捷菜单   
+  
+简书: 
+应用icon快捷菜单   http://www.jianshu.com/p/589386a7f6d2    
 应用内3DTouch跳转(仿京东)   
 
 效果图如下:  
