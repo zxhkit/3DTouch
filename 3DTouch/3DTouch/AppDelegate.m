@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeDetailController.h"
 
 @interface AppDelegate ()
 
@@ -14,10 +15,59 @@
 
 @implementation AppDelegate
 
-
+-(void)setup3DTouch{
+    
+    //    UIApplicationShortcutIcon *icon0 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeAdd];
+    
+    
+    UIApplicationShortcutIcon *icon1 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic1"];
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic2"];
+    UIApplicationShortcutIcon *icon3 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic3"];
+    UIApplicationShortcutIcon *icon4 = [UIApplicationShortcutIcon iconWithTemplateImageName:@"pic4"];
+    
+    //    UIMutableApplicationShortcutItem *item0 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"add" localizedTitle:@"进入add" localizedSubtitle:nil icon:icon0 userInfo:nil];
+    
+    UIMutableApplicationShortcutItem *item1 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"pic1" localizedTitle:@"进入pic1" localizedSubtitle:@"自定义图标pic1" icon:icon1 userInfo:nil];
+    UIMutableApplicationShortcutItem *item2 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"pic2" localizedTitle:@"进入pic2" localizedSubtitle:@"自定义图标pic2" icon:icon2 userInfo:nil];
+    UIMutableApplicationShortcutItem *item3 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"pic3" localizedTitle:@"进入pic3" localizedSubtitle:@"自定义图标pic3" icon:icon3 userInfo:nil];
+    UIMutableApplicationShortcutItem *item4 = [[UIMutableApplicationShortcutItem alloc]initWithType:@"pic4" localizedTitle:@"进入pic4" localizedSubtitle:@"自定义图标pic4" icon:icon4 userInfo:nil];
+    
+    
+    [[UIApplication sharedApplication] setShortcutItems:@[item1,item2,item3,item4]];
+    //      [[UIApplication sharedApplication] setShortcutItems:@[item0]];
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // 首先判断是否支持3DTouch
+    if(self.window.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
+    {
+        [self setup3DTouch];
+    }
     return YES;
+}
+#pragma mark -  通过快捷选项进入app的时候会调用该方法
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    HomeDetailController *vc = [[HomeDetailController alloc] init];
+    
+    
+    //1.获得shortcutItem的type type就是初始化shortcutItem的时候传入的唯一标识符
+    NSString *type = shortcutItem.type;
+    //2.可以通过type来判断点击的是哪一个快捷按钮 并进行每个按钮相应的点击事件
+    if ([type isEqualToString:@"pic1"]) {
+        vc.name = @"pic1";
+    }else if ([type isEqualToString:@"pic2"]){
+        vc.name = @"pic2";
+    }else if ([type isEqualToString:@"pic3"]){
+        vc.name = @"pic3";
+    }else if ([type isEqualToString:@"pic4"]){
+        vc.name = @"pic4";
+    }
+    
+    [(UINavigationController *)self.window.rootViewController pushViewController:vc animated:YES];
+    
+    
 }
 
 

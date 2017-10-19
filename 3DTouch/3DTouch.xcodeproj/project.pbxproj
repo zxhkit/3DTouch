@@ -13,6 +13,8 @@
 		809257B71F98971500BDFFA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809257B61F98971500BDFFA8 /* Assets.xcassets */; };
 		809257BA1F98971500BDFFA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809257B81F98971500BDFFA8 /* LaunchScreen.storyboard */; };
 		809257BD1F98971500BDFFA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 809257BC1F98971500BDFFA8 /* main.m */; };
+		809257C71F9897CF00BDFFA8 /* HomeDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809257C31F9897CF00BDFFA8 /* HomeDetailController.m */; };
+		809257C81F9897CF00BDFFA8 /* HomeTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 809257C51F9897CF00BDFFA8 /* HomeTestController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		809257B91F98971500BDFFA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809257BB1F98971500BDFFA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		809257BC1F98971500BDFFA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		809257C31F9897CF00BDFFA8 /* HomeDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeDetailController.m; sourceTree = "<group>"; };
+		809257C41F9897CF00BDFFA8 /* HomeTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTestController.h; sourceTree = "<group>"; };
+		809257C51F9897CF00BDFFA8 /* HomeTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTestController.m; sourceTree = "<group>"; };
+		809257C61F9897CF00BDFFA8 /* HomeDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeDetailController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				809257AE1F98971500BDFFA8 /* AppDelegate.m */,
 				809257B01F98971500BDFFA8 /* ViewController.h */,
 				809257B11F98971500BDFFA8 /* ViewController.m */,
+				809257C61F9897CF00BDFFA8 /* HomeDetailController.h */,
+				809257C31F9897CF00BDFFA8 /* HomeDetailController.m */,
+				809257C41F9897CF00BDFFA8 /* HomeTestController.h */,
+				809257C51F9897CF00BDFFA8 /* HomeTestController.m */,
 				809257B31F98971500BDFFA8 /* Main.storyboard */,
 				809257B61F98971500BDFFA8 /* Assets.xcassets */,
 				809257B81F98971500BDFFA8 /* LaunchScreen.storyboard */,
@@ -142,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				809257C81F9897CF00BDFFA8 /* HomeTestController.m in Sources */,
 				809257B21F98971500BDFFA8 /* ViewController.m in Sources */,
+				809257C71F9897CF00BDFFA8 /* HomeDetailController.m in Sources */,
 				809257BD1F98971500BDFFA8 /* main.m in Sources */,
 				809257AF1F98971500BDFFA8 /* AppDelegate.m in Sources */,
 			);
@@ -281,8 +293,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K963G24NF;
 				INFOPLIST_FILE = 3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mamahome.-DTouch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mamahome.3DTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -295,8 +308,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K963G24NF;
 				INFOPLIST_FILE = 3DTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mamahome.-DTouch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mamahome.3DTouch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
